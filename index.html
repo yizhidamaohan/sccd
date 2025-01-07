@@ -29,16 +29,16 @@
         /* 标题样式 */
         .title {
             text-align: center;
-            font-size: 2.8em; /* 主标题字号调大 */
+            font-size: 2.5em; /* 主标题字号 */
             font-weight: bold;
             color: #333;
+            line-height: 1.5;
         }
 
         .title span {
             display: block;
-            margin-top: 5px;
-            font-size: 1.5em; /* 子标题字号较小 */
-            color: #333;
+            font-size: 1em; /* 让换行后的部分字体稍微小一些 */
+            font-weight: normal; /* 子部分不加粗，和主部分有层次感 */
         }
 
         .author {
@@ -119,10 +119,7 @@
                 padding: 20px;
             }
             .title {
-                font-size: 2.3em; /* 调整主标题在小屏幕上的大小 */
-            }
-            .title span {
-                font-size: 1.3em; /* 调整子标题在小屏幕上的大小 */
+                font-size: 2em;
             }
         }
     </style>
@@ -131,7 +128,8 @@
     <div class="container">
         <!-- 页面标题 -->
         <div class="title">
-            SCCD: <span>A Session-based Dataset for Chinese Cyberbullying Detection</span>
+            SCCD:<br>
+            <span>A Session-based Dataset for Chinese Cyberbullying Detection</span>
         </div>
         <!-- 作者信息 -->
         <div class="author">Authors: Qingpo Yang, Yakai Chen, Zihui Xu, Yu-ming Shang, Sanchuan Guo, Xi Zhang*</div>
