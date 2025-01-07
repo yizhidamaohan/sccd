@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>SCCD: A Session-based Dataset for Chinese Cyberbullying Detection</title>
-    <link rel="stylesheet" href="assets/styles/icons.css"> <!-- 替换为 nerfies 的图标样式路径 -->
+    <link rel="stylesheet" href="path/to/nerfies-icon-styles.css"> <!-- 替换为模板的图标样式路径 -->
     <style>
         /* 页面整体样式 */
         body {
@@ -29,7 +29,7 @@
         /* 标题样式 */
         .title {
             text-align: center;
-            font-size: 2.5em; /* 标题字号 */
+            font-size: 2.5em;
             font-weight: bold;
             color: #333;
         }
@@ -37,8 +37,8 @@
         .title span {
             display: block;
             margin-top: 5px;
-            font-size: 2.5em; /* 保持一致的字号 */
-            color: #333; /* 去掉高亮 */
+            font-size: 2.5em; /* 修改为与前面部分相同 */
+            color: #333; /* 去掉高亮样式 */
         }
 
         .author {
@@ -163,20 +163,20 @@
         <!-- Key-Highlights -->
         <h2>Key-Highlights</h2>
         <ul>
-            <li><img src="assets/icons/database.svg" class="icon"> To the best of our knowledge, SCCD is the first open-source Chinese cyberbullying detection dataset, which systematically gathers and formalizes sessions from diverse topics.</li>
-            <li><img src="assets/icons/edit.svg" class="icon"> SCCD presents fine-grained annotations of session comments to enable more detailed analysis and more explainable detection.</li>
-            <li><img src="assets/icons/chart.svg" class="icon"> We present initial experimental results on the novel dataset, which are intended to serve as benchmarks for further experiments.</li>
+            <li><span class="icon">🗃️</span> To the best of our knowledge, SCCD is the first open-source Chinese cyberbullying detection dataset, which systematically gathers and formalizes sessions from diverse topics.</li>
+            <li><span class="icon">🖋️</span> SCCD presents fine-grained annotations of session comments to enable more detailed analysis and more explainable detection.</li>
+            <li><span class="icon">📊</span> We present initial experimental results on the novel dataset, which are intended to serve as benchmarks for further experiments.</li>
         </ul>
 
         <!-- Data Construction -->
         <h2>Data Construction</h2>
         <p>
-            <img src="assets/icons/cogs.svg" class="icon"> We crawled the published sessions from Weibo, a public online social platform, employing three strategies: keyword querying, 
+            <span class="icon">⚙️</span> We crawled the published sessions from Weibo, a public online social platform, employing three strategies: keyword querying, 
             crawling from typical instances of cyberbullying and popular daily events. Subsequently, we conducted a series of preprocessing 
             steps to refine the data.
         </p>
         <p>
-            <img src="assets/icons/group.svg" class="icon"> The annotation procedure consists of two distinct stages: comment annotation and session annotation. We propose a 
+            <span class="icon">👥</span> The annotation procedure consists of two distinct stages: comment annotation and session annotation. We propose a 
             human-in-the-loop approach to improve collaboration between human annotators and the LLM. Initially, the post is provided to 
             the LLM to establish context. Then, we use demonstration-based prompting for few-shot learning. A subset of comments is labeled 
             by the LLM, verified by human annotators, corrected if needed, and used as demonstrations to further train the LLM. Once all 
@@ -192,7 +192,7 @@
         <!-- Data Static -->
         <h2>Data Static</h2>
         <p>
-            <img src="assets/icons/chart-bar.svg" class="icon"> The dataset consists of a total of <span class="highlight">677 sessions</span>, where 
+            <span class="icon">📈</span> The dataset consists of a total of <span class="highlight">677 sessions</span>, where 
             <span class="highlight">354</span> are tagged as cyberbullying (further labeled with cyberbullying severity). As it can be seen, 
             our dataset is balanced. Across all 677 sessions, <span class="highlight">9,805 comments</span> are labeled as cyberbullying and 
             <span class="highlight">29,194</span> as non-cyberbullying.
