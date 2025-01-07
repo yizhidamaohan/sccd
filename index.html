@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>What is SCCD?</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            background-color: #f9f9f9;
+            color: #333;
+        }
+        .container {
+            max-width: 800px;
+            margin: 50px auto;
+            background: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        h1, h2 {
+            color: #555;
+        }
+        h1 {
+            border-bottom: 2px solid #ddd;
+            padding-bottom: 10px;
+        }
+        ul {
+            padding-left: 20px;
+        }
+        li {
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>What is SCCD?</h1>
+        <p>SCCD (Session-based Chinese Cyberbullying Dataset) is the first publicly available Chinese dataset for cyberbullying detection. SCCD is balanced and contains 677 sessions, with 52.3% classified as instances of cyberbullying. Each cyberbullying session is annotated with an overall severity level categorized as low, medium, or high. All comments are carefully annotated by human and LLM annotators, providing detailed labels that capture multiple aspects of the text.</p>
+        
+        <h2>Key-Highlights</h2>
+        <ul>
+            <li>SCCD is the first open-source Chinese cyberbullying detection dataset, which systematically gathers and formalizes sessions from diverse topics.</li>
+            <li>SCCD presents fine-grained annotations of session comments to enable more detailed analysis and more explainable detection.</li>
+            <li>We present initial experimental results on the novel dataset, which are intended to serve as benchmarks for further experiments.</li>
+        </ul>
+        
+        <h2>Data Construction</h2>
+        <p>We crawled the published sessions from Weibo, a public online social platform, employing three strategies: keyword querying, crawling from typical instances of cyberbullying and popular daily events. Subsequently, we conducted a series of preprocessing steps to refine the data.</p>
+        <p>The annotation procedure consists of two distinct stages: comment annotation and session annotation. We propose a human-in-the-loop approach to improve collaboration between human annotators and the LLM. Initially, the post is provided to the LLM to establish context. Then, we use demonstration-based prompting for few-shot learning. A subset of comments is labeled by the LLM, verified by human annotators, corrected if needed, and used as demonstrations to further train the LLM. Once all comments in a session are annotated, human annotators review the initial post along with the annotated comments to determine whether the session involves cyberbullying or remains normal. If a session is identified as cyberbullying, human annotators will assess the cyberbullying severity of the session.</p>
+        
+        <h2>Data Static</h2>
+        <p>The dataset consists of a total of 677 sessions, where 354 are tagged as cyberbullying (further labeled with cyberbullying severity). As it can be seen, our dataset is balanced. Across all 677 sessions, 9,805 comments are labeled as cyberbullying and 29,194 as non-cyberbullying.</p>
+    </div>
+</body>
+</html>
