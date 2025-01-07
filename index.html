@@ -28,10 +28,16 @@
         /* 标题样式 */
         .title {
             text-align: center;
-            margin-bottom: 10px;
             font-size: 2.5em;
             font-weight: bold;
             color: #333;
+        }
+
+        .title span {
+            display: block;
+            margin-top: 5px;
+            font-size: 1.8em;
+            color: #007BFF;
         }
 
         .author {
@@ -83,6 +89,22 @@
             font-weight: bold;
         }
 
+        /* 艺术字样式 */
+        .art-text {
+            font-weight: bold;
+            font-size: 1.3em;
+            color: #28a745;
+        }
+        .art-text-red {
+            font-weight: bold;
+            font-size: 1.3em;
+            color: #d9534f;
+        }
+        .icon {
+            font-size: 1.2em;
+            margin-right: 5px;
+        }
+
         /* 分割线 */
         .divider {
             height: 2px;
@@ -101,18 +123,22 @@
             }
         }
     </style>
+    <!-- 使用 FontAwesome 插件 -->
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
 </head>
 <body>
     <div class="container">
         <!-- 页面标题 -->
-        <div class="title">SCCD: A Session-based Dataset for Chinese Cyberbullying Detection</div>
+        <div class="title">
+            SCCD: <span>A Session-based Dataset for Chinese Cyberbullying Detection</span>
+        </div>
         <!-- 作者信息 -->
         <div class="author">Authors: Qingpo Yang, Yakai Chen, Zihui Xu, Yu-ming Shang, Sanchuan Guo, Xi Zhang*</div>
         <div class="institution">Beijing University of Posts and Telecommunications</div>
 
         <!-- 第一段内容 -->
         <p>
-            SCCD (
+            <span class="art-text"><i class="fas fa-database icon"></i>SCCD</span> (
             <span class="highlight">S</span>ession-based 
             <span class="highlight">C</span>hinese 
             <span class="highlight">C</span>yberbullying 
@@ -127,7 +153,10 @@
         <img src="图片1.png" alt="Example of comments">
 
         <!-- 第二段内容 -->
-        <p>Compared to existing cyberbullying datasets, our dataset possesses the following advantages:</p>
+        <p>
+            <span class="art-text-red"><i class="fas fa-star icon"></i>Compared to existing cyberbullying datasets</span>, 
+            our dataset possesses the following advantages:
+        </p>
         <img src="图片2.png" alt="Comparison table">
 
         <!-- 分割线 -->
@@ -136,20 +165,20 @@
         <!-- Key-Highlights -->
         <h2>Key-Highlights</h2>
         <ul>
-            <li>To the best of our knowledge, SCCD is the first open-source Chinese cyberbullying detection dataset, which systematically gathers and formalizes sessions from diverse topics.</li>
-            <li>SCCD presents fine-grained annotations of session comments to enable more detailed analysis and more explainable detection.</li>
-            <li>We present initial experimental results on the novel dataset, which are intended to serve as benchmarks for further experiments.</li>
+            <li><i class="fas fa-check-circle icon"></i>To the best of our knowledge, SCCD is the first open-source Chinese cyberbullying detection dataset, which systematically gathers and formalizes sessions from diverse topics.</li>
+            <li><i class="fas fa-check-circle icon"></i>SCCD presents fine-grained annotations of session comments to enable more detailed analysis and more explainable detection.</li>
+            <li><i class="fas fa-check-circle icon"></i>We present initial experimental results on the novel dataset, which are intended to serve as benchmarks for further experiments.</li>
         </ul>
 
         <!-- Data Construction -->
         <h2>Data Construction</h2>
         <p>
-            We crawled the published sessions from Weibo, a public online social platform, employing three strategies: keyword querying, 
+            <i class="fas fa-cogs icon"></i> We crawled the published sessions from Weibo, a public online social platform, employing three strategies: keyword querying, 
             crawling from typical instances of cyberbullying and popular daily events. Subsequently, we conducted a series of preprocessing 
             steps to refine the data.
         </p>
         <p>
-            The annotation procedure consists of two distinct stages: comment annotation and session annotation. We propose a 
+            <i class="fas fa-user-friends icon"></i> The annotation procedure consists of two distinct stages: comment annotation and session annotation. We propose a 
             human-in-the-loop approach to improve collaboration between human annotators and the LLM. Initially, the post is provided to 
             the LLM to establish context. Then, we use demonstration-based prompting for few-shot learning. A subset of comments is labeled 
             by the LLM, verified by human annotators, corrected if needed, and used as demonstrations to further train the LLM. Once all 
@@ -165,7 +194,7 @@
         <!-- Data Static -->
         <h2>Data Static</h2>
         <p>
-            The dataset consists of a total of <span class="highlight">677 sessions</span>, where 
+            <i class="fas fa-chart-bar icon"></i> The dataset consists of a total of <span class="highlight">677 sessions</span>, where 
             <span class="highlight">354</span> are tagged as cyberbullying (further labeled with cyberbullying severity). As it can be seen, 
             our dataset is balanced. Across all 677 sessions, <span class="highlight">9,805 comments</span> are labeled as cyberbullying and 
             <span class="highlight">29,194</span> as non-cyberbullying.
