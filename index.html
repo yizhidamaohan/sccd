@@ -79,12 +79,14 @@
             transition: background-color 0.3s ease;
         }
 
-        .button:hover {
-            background-color: #555;
+        .button img {
+            width: 20px; /* 图标宽度 */
+            height: 20px; /* 图标高度 */
+            margin-right: 10px; /* 图标和文字的间距 */
         }
 
-        .button i {
-            margin-right: 8px; /* 图标与文字的间距 */
+        .button:hover {
+            background-color: #555;
         }
 
         /* 小标题样式 */
@@ -170,12 +172,19 @@
 
         <!-- 按钮部分 -->
         <div class="button-container">
-            <a href="#" class="button"><i class="nerfies-icon-database"></i>Dataset</a>
-            <a href="#" class="button"><i class="nerfies-icon-arxiv"></i>arXiv</a>
-            <a href="#" class="button"><i class="nerfies-icon-trophy"></i>Leaderboard</a>
-            <a href="#" class="button"><i class="nerfies-icon-email"></i>Email</a>
+            <a href="#" class="button">
+                <img src="assets/icons/database.png" alt="Dataset Icon">Dataset
+            </a>
+            <a href="#" class="button">
+                <img src="assets/icons/file.png" alt="arXiv Icon">arXiv
+            </a>
+            <a href="#" class="button">
+                <img src="assets/icons/trophy.png" alt="Leaderboard Icon">Leaderboard
+            </a>
+            <a href="#" class="button">
+                <img src="assets/icons/email.png" alt="Email Icon">Email
+            </a>
         </div>
-
         
         <!-- 第一段内容 -->
         <p>
