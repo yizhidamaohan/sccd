@@ -56,6 +56,36 @@
             font-size: 0.9em;
             color: #777;
         }
+        
+        /* 按钮样式 */
+        .button-container {
+            text-align: center;
+            margin-top: 10px;
+        }
+
+        .button {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            margin: 5px;
+            padding: 10px 20px;
+            font-size: 1em;
+            font-weight: 500;
+            color: #fff;
+            background-color: #333;
+            border: none;
+            border-radius: 50px;
+            text-decoration: none;
+            transition: background-color 0.3s ease;
+        }
+
+        .button:hover {
+            background-color: #555;
+        }
+
+        .button i {
+            margin-right: 8px; /* 图标与文字的间距 */
+        }
 
         /* 小标题样式 */
         h2 {
@@ -137,6 +167,16 @@
         <div class="author">Qingpo Yang, Yakai Chen, Zihui Xu, Yu-ming Shang, Sanchuan Guo, Xi Zhang*</div>
         <div class="institution">Beijing University of Posts and Telecommunications</div>
 
+
+        <!-- 按钮部分 -->
+        <div class="button-container">
+            <a href="#" class="button"><i class="nerfies-icon-database"></i>Dataset</a>
+            <a href="#" class="button"><i class="nerfies-icon-arxiv"></i>arXiv</a>
+            <a href="#" class="button"><i class="nerfies-icon-trophy"></i>Leaderboard</a>
+            <a href="#" class="button"><i class="nerfies-icon-email"></i>Email</a>
+        </div>
+
+        
         <!-- 第一段内容 -->
         <p>
             <span class="highlight">SCCD</span> (
