@@ -4,13 +4,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>SCCD: A Session-based Dataset for Chinese Cyberbullying Detection</title>
-    <!-- 引入 Google Fonts 和 Nerfies 图标样式 -->
+    <!-- 引入 Google Fonts 中的圆润字体 -->
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="path/to/nerfies-icons.css"> <!-- 替换为实际图标样式路径 -->
     <style>
         /* 页面整体样式 */
         body {
-            font-family: 'Poppins', sans-serif;
+            font-family: 'Poppins', sans-serif; /* 更改为 Poppins 字体 */
             line-height: 1.8;
             margin: 0;
             padding: 0;
@@ -31,7 +30,7 @@
         /* 标题样式 */
         .title {
             text-align: center;
-            font-size: 2.5em;
+            font-size: 2.5em; /* 主标题字号 */
             font-weight: bold;
             color: #333;
             line-height: 1.5;
@@ -39,8 +38,8 @@
 
         .title span {
             display: block;
-            font-size: 1em;
-            font-weight: 400;
+            font-size: 1em; /* 让换行后的部分字体稍微小一些 */
+            font-weight: 400; /* 子部分字体稍微减轻 */
         }
 
         .author {
@@ -49,44 +48,71 @@
             color: #555;
             margin-top: 5px;
             margin-bottom: 15px;
-            font-style: normal;
+            font-style: normal; /* 去掉斜体 */
         }
 
         .institution {
             text-align: center;
             font-size: 0.9em;
             color: #777;
-            margin-bottom: 15px;
         }
 
-        /* 按钮样式 */
-        .button-container {
+        /* 小标题样式 */
+        h2 {
             text-align: center;
-            margin-top: 10px;
-        }
-
-        .button {
-            display: inline-flex;
-            align-items: center;
-            justify-content: center;
-            margin: 5px;
-            padding: 10px 20px;
-            font-size: 1em;
+            font-size: 1.8em;
             font-weight: 500;
-            color: #fff;
-            background-color: #333;
+            color: #004085;
+            margin-top: 40px;
+        }
+
+        /* 段落样式 */
+        p {
+            margin: 15px 0;
+            font-size: 1.1em;
+            color: #555;
+            line-height: 1.8;
+        }
+
+        /* 列表样式 */
+        ul {
+            margin: 15px 0;
+            padding-left: 20px;
+        }
+        li {
+            font-size: 1.1em;
+            margin-bottom: 10px;
+            display: flex;
+            align-items: center;
+        }
+        li .icon {
+            font-size: 1.2em;
+            margin-right: 10px;
+            color: #007BFF;
+        }
+
+        /* 图片样式 */
+        img {
+            max-width: 100%;
+            height: auto;
+            display: block;
+            margin: 20px auto;
+            border-radius: 8px;
+            box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+        }
+
+        /* 高亮文本样式 */
+        .highlight {
+            color: #d9534f;
+            font-weight: bold;
+        }
+
+        /* 分割线 */
+        .divider {
+            height: 2px;
+            background-color: #d9e2ef;
+            margin: 30px 0;
             border: none;
-            border-radius: 50px;
-            text-decoration: none;
-            transition: background-color 0.3s ease;
-        }
-
-        .button:hover {
-            background-color: #555;
-        }
-
-        .button i {
-            margin-right: 8px; /* 图标与文字的间距 */
         }
 
         /* 响应式布局 */
@@ -110,14 +136,6 @@
         <!-- 作者信息 -->
         <div class="author">Qingpo Yang, Yakai Chen, Zihui Xu, Yu-ming Shang, Sanchuan Guo, Xi Zhang*</div>
         <div class="institution">Beijing University of Posts and Telecommunications</div>
-        
-        <!-- 按钮部分 -->
-        <div class="button-container">
-            <a href="#" class="button"><i class="nerfies-icon-database"></i>Dataset</a>
-            <a href="#" class="button"><i class="nerfies-icon-arxiv"></i>arXiv</a>
-            <a href="#" class="button"><i class="nerfies-icon-trophy"></i>Leaderboard</a>
-            <a href="#" class="button"><i class="nerfies-icon-email"></i>Email</a>
-        </div>
 
         <!-- 第一段内容 -->
         <p>
