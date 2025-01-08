@@ -4,8 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>SCCD: A Session-based Dataset for Chinese Cyberbullying Detection</title>
-    <!-- 引入 Google Fonts 中的圆润字体 -->
+    <!-- 引入 Google Fonts 和图标字体 -->
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" integrity="sha512-Fo3rlrZj/k7ujTnH1zqcN7kdzE2q6RoNNzRlGj1Wz3Kp3aW6xkJjJcP8YcY2b3syj0oUuAzCwz8I6FfVFbONBQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <style>
         /* 页面整体样式 */
         body {
@@ -55,6 +56,37 @@
             text-align: center;
             font-size: 0.9em;
             color: #777;
+            margin-bottom: 15px;
+        }
+
+        /* 按钮样式 */
+        .button-container {
+            text-align: center;
+            margin-top: 10px;
+        }
+
+        .button {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            margin: 5px;
+            padding: 10px 20px;
+            font-size: 1em;
+            font-weight: 500;
+            color: #fff;
+            background-color: #333;
+            border: none;
+            border-radius: 50px; /* 圆角样式 */
+            text-decoration: none;
+            transition: background-color 0.3s ease;
+        }
+
+        .button:hover {
+            background-color: #555;
+        }
+
+        .button i {
+            margin-right: 8px; /* 图标与文字的间距 */
         }
 
         /* 小标题样式 */
@@ -136,6 +168,13 @@
         <!-- 作者信息 -->
         <div class="author">Qingpo Yang, Yakai Chen, Zihui Xu, Yu-ming Shang, Sanchuan Guo, Xi Zhang*</div>
         <div class="institution">Beijing University of Posts and Telecommunications</div>
+        <!-- 按钮 -->
+        <div class="button-container">
+            <a href="#" class="button"><i class="fas fa-database"></i>Dataset</a>
+            <a href="#" class="button"><i class="fas fa-pen-nib"></i>arXiv</a>
+            <a href="#" class="button"><i class="fas fa-trophy"></i>Leaderboard</a>
+            <a href="#" class="button"><i class="fas fa-envelope"></i>Email</a>
+        </div>
 
         <!-- 第一段内容 -->
         <p>
@@ -152,55 +191,6 @@
             Examples of comments with fine-grained labels are shown below:
         </p>
         <img src="图片1.png" alt="Example of comments">
-
-        <!-- 第二段内容 -->
-        <p>
-            <span class="highlight">Compared to existing cyberbullying datasets</span>, 
-            our dataset possesses the following advantages:
-        </p>
-        <img src="图片2.png" alt="Comparison table">
-
-        <!-- 分割线 -->
-        <hr class="divider">
-
-        <!-- Key-Highlights -->
-        <h2>Key-Highlights</h2>
-        <ul>
-            <li><span class="icon">🗃️</span> To the best of our knowledge, SCCD is the first open-source Chinese cyberbullying detection dataset, which systematically gathers and formalizes sessions from diverse topics.</li>
-            <li><span class="icon">🖋️</span> SCCD presents fine-grained annotations of session comments to enable more detailed analysis and more explainable detection.</li>
-            <li><span class="icon">📊</span> We present initial experimental results on the novel dataset, which are intended to serve as benchmarks for further experiments.</li>
-        </ul>
-
-        <!-- Data Construction -->
-        <h2>Data Construction</h2>
-        <p>
-            <span class="icon">⚙️</span> We crawled the published sessions from Weibo, a public online social platform, employing three strategies: keyword querying, 
-            crawling from typical instances of cyberbullying and popular daily events. Subsequently, we conducted a series of preprocessing 
-            steps to refine the data.
-        </p>
-        <p>
-            <span class="icon">👥</span> The annotation procedure consists of two distinct stages: comment annotation and session annotation. We propose a 
-            human-in-the-loop approach to improve collaboration between human annotators and the LLM. Initially, the post is provided to 
-            the LLM to establish context. Then, we use demonstration-based prompting for few-shot learning. A subset of comments is labeled 
-            by the LLM, verified by human annotators, corrected if needed, and used as demonstrations to further train the LLM. Once all 
-            comments in a session are annotated, human annotators review the initial post along with the annotated comments to determine 
-            whether the session involves cyberbullying or remains normal. If a session is identified as cyberbullying, human annotators will 
-            assess the cyberbullying severity of the session.
-        </p>
-        <img src="图片3.png" alt="Data Construction Process">
-
-        <!-- 分割线 -->
-        <hr class="divider">
-
-        <!-- Data Static -->
-        <h2>Data Static</h2>
-        <p>
-            <span class="icon">📈</span> The dataset consists of a total of <span class="highlight">677 sessions</span>, where 
-            <span class="highlight">354</span> are tagged as cyberbullying (further labeled with cyberbullying severity). As it can be seen, 
-            our dataset is balanced. Across all 677 sessions, <span class="highlight">9,805 comments</span> are labeled as cyberbullying and 
-            <span class="highlight">29,194</span> as non-cyberbullying.
-        </p>
-        <img src="图片4.png" alt="Data Statistics">
     </div>
 </body>
 </html>
